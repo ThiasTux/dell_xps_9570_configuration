@@ -22,4 +22,7 @@ In the folders:
 	/usr/share/X11/xorg.conf.d/ (for Ubuntu)
 
 And reboot. Gnome allows to execute those commands once logged in. KDE to be tested.
+Sources:
+https://wiki.archlinux.org/index.php/HiDPI#Multiple_displays
+https://unix.stackexchange.com/questions/358992/cursor-flickers-with-xrandr-scaling
 
