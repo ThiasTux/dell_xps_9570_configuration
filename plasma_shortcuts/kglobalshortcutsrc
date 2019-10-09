@@ -2,12 +2,14 @@
 update_info=powerdevil_move_shortcuts.upd:powerdevil_move_shortcuts
 
 [ActivityManager]
-_k_friendly_name=Plasma
+_k_friendly_name=Activity Manager
+switch-to-activity-5e853490-d2e9-45ec-84af-060d06db4c60=none,none,Switch to activity "Two"
+switch-to-activity-6fcb5c7b-096d-406b-9f76-e60601c4e75f=none,none,Switch to activity "One"
 switch-to-activity-7c639c6b-4ab3-43a0-a677-446a808c0564=none,none,
 switch-to-activity-8b093297-7f5e-4355-b09f-7cc9a14a9fb0=none,none,
 
 [KDE Keyboard Layout Switcher]
-Switch to Next Keyboard Layout=Ctrl+Alt+K,none,Switch to Next Keyboard Layout
+Switch to Next Keyboard Layout=Ctrl+Alt+K,Ctrl+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=KDE Daemon
 
 [PlayBar]
@@ -36,13 +38,10 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 [khotkeys]
 _k_friendly_name=KDE Daemon
 {3df87441-f267-4cd7-aed9-fb2d28bb9c04}=Ctrl+Alt+T,none,Konsole
-{6c398e54-d21b-4e60-8654-f9bfdddaa444}=Meta+Print,none,Take Active Window Screenshot
-{718558d4-099f-4597-bffb-c84ce07bc6b7}=Shift+Print,none,Take Full Screen Screenshot
-{9522a52b-4928-428d-b4f4-23e4b6938248}=Meta+L,none,MyLockScreen
+{51670f8d-473d-4989-a6b4-badd80b422c5}=,none,Launch Konsole
+{9522a52b-4928-428d-b4f4-23e4b6938248}=,none,MyLockScreen
 {995ed2ff-11ab-476f-8e6a-2fadb3dea3ee}=Ctrl+Alt+Del,none,TaskManager
-{cb9cf96d-a567-4366-891a-586b208d3d8f}=Print,none,Start Screenshot Tool
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=Search,none,Search
-{ee369078-1abe-4ff5-83ab-14a1b882160e}=Meta+Shift+Print,none,Take Rectangular Region Screenshot
 
 [kmix]
 _k_friendly_name=Audio Volume
@@ -60,7 +59,7 @@ run command on clipboard contents=Alt+Shift+F2,Alt+Shift+F2,Run Command on clipb
 
 [ksmserver]
 Halt Without Confirmation=Ctrl+Alt+Shift+PgDown,none,Halt Without Confirmation
-Lock Session=\tScreensaver,Ctrl+Alt+L\tScreensaver,Lock Session
+Lock Session=Meta+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
 Log Out=none,none,Log Out
 Log Out Without Confirmation=Ctrl+Alt+Shift+Del,none,Log Out Without Confirmation
 Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp,none,Reboot Without Confirmation
@@ -83,11 +82,11 @@ MoveZoomRight=,none,Move Zoomed Area to Right
 MoveZoomUp=,none,Move Zoomed Area Upwards
 Remove Window From Group=none,none,Remove Window From Group
 Setup Window Shortcut=none,none,Setup Window Shortcut
-Show Desktop=Meta+Shift+D,none,Show Desktop
+Show Desktop=Meta+Shift+D,Meta+D,Show Desktop
 ShowDesktopGrid=Meta+Ctrl+W,Ctrl+F8,Show Desktop Grid
 Suspend Compositing=Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing
 Switch One Desktop Down=Meta+Ctrl+Down,none,Switch One Desktop Down
-Switch One Desktop Up=Meta+Ctrl+Up,none,Switch One Desktop Up
+Switch One Desktop Up=,none,Switch One Desktop Up
 Switch One Desktop to the Left=Meta+Ctrl+Left,none,Switch One Desktop to the Left
 Switch One Desktop to the Right=Meta+Ctrl+Right,none,Switch One Desktop to the Right
 Switch Window Down=Meta+Alt+Down,Meta+Alt+Down,Switch to Window Below
@@ -268,6 +267,7 @@ new instance for entry 5=,Meta+Ctrl+5,New Instance for Entry 5
 new instance for entry 6=,Meta+Ctrl+6,New Instance for Entry 6
 new instance for entry 7=,Meta+Ctrl+7,New Instance for Entry 7
 new instance for entry 8=,Meta+Ctrl+8,New Instance for Entry 8
+new instance for entry 9=,Meta+Ctrl+9,New Instance for Entry 9
 new instance for task manager entry 1=Meta+Ctrl+1,Meta+Ctrl+1,New Instance for Task Manager Entry 1
 new instance for task manager entry 10=Meta+Ctrl+0,Meta+Ctrl+0,New Instance for Task Manager Entry 10
 new instance for task manager entry 2=Meta+Ctrl+2,Meta+Ctrl+2,New Instance for Task Manager Entry 2
@@ -281,8 +281,11 @@ new instance for task manager entry 9=Meta+Ctrl+9,Meta+Ctrl+9,New Instance for T
 repeat_action=,Ctrl+Alt+R,Manually Invoke Action on Current Clipboard
 show dock settings=Meta+A,Meta+A,Show Dock Settings
 show latte dock=Meta+`,Meta+`,Show Dock
+show latte global settings=,Meta+W,Show Latte Global Settings
 show latte universal settings=Meta+E,Meta+E,Show Latte Settings
+show latte view=,Meta+`,Show Latte Dock/Panel
 show layout settings=,Meta+W,Show Layout Settings
+show view settings=,Meta+A,Cycle Through Dock/Panel Settings Windows
 show-barcode=none,none,Show Barcode...
 show-on-mouse-pos=none,none,Open Klipper at Mouse Position
 
@@ -294,6 +297,18 @@ nextmedia=,Media Next,Media playback next
 playpausemedia=,Media Play,Play/Pause media playback
 previousmedia=,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
+
+[org.kde.dolphin.desktop]
+_k_friendly_name=Dolphin
+_launch=,Meta+E,Dolphin
+
+[org.kde.spectacle.desktop]
+ActiveWindowScreenShot=Meta+Print,Meta+Print,Capture Active Window
+CurrentMonitorScreenShot=,none,Capture Current Monitor
+FullScreenScreenShot=Shift+Print,Shift+Print,Capture Entire Desktop
+RectangularRegionScreenShot=Meta+Shift+Print,Meta+Shift+Print,Capture Rectangular Region
+_k_friendly_name=Spectacle
+_launch=Print,Print,Launch Spectacle
 
 [org_kde_powerdevil]
 Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness
@@ -318,7 +333,10 @@ activate task manager entry 6=,Meta+6,Activate Task Manager Entry 6
 activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
-activate widget 29=Alt+F1,none,Activate Application Dashboard Widget
+activate widget 19=Alt+F1,none,Activate Application Dashboard Widget
+activate widget 29=,none,Activate Application Dashboard Widget
+activate widget 3=,none,Activate Application Launcher Widget
+activate widget 35=none,none,Activate Thermal Monitor Widget
 activate widget 47=none,none,Activate PlayBar Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions

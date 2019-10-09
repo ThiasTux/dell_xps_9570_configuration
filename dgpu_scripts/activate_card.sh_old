@@ -1,0 +1,23 @@
+#!/bin/bash
+# --------- TURNING ON GPU -----------
+echo 'Turning the PCIe controller on to allow card rescan'
+sudo tee /sys/bus/pci/devices/0000:00:01.0/power/control <<<on
+
+echo 'Waiting 1 second'
+sleep 1
+
+echo 'Rescanning PCI devices'
+sudo tee /sys/bus/pci/rescan <<<1
+
+# ---------- LOADING MODULES ----------
+echo 'Loading nvidia module'
+sudo modprobe nvidia
+
+echo 'Loading nvidia_uvm module'
+sudo modprobe nvidia_uvm
+
+echo 'Loading nvidia_modeset module'
+sudo modprobe nvidia_modeset
+
+echo 'Loading nvidia_drm module'
+sudo modprobe nvidia_drm

@@ -1,0 +1,20 @@
+#!/bin/bash
+echo 'Unloading nvidia_drm module'
+sudo rmmod nvidia_drm
+
+echo 'Unloading nvidia_modeset module'
+sudo rmmod nvidia_modeset
+
+echo 'Unloading nvidia_uvm module'
+sudo rmmod nvidia_uvm
+
+echo 'Unloading nvidia module'
+sudo rmmod nvidia
+
+if [ -f /sys/bus/pci/devices/0000:01:00.0/remove ]; then
+  echo 'Removing Nvidia bus from the kernel'
+sudo tee /sys/bus/pci/devices/0000:01:00.0/remove <<<1
+fi
+
+echo 'Enabling powersave for the PCIe controller'
+sudo tee /sys/bus/pci/devices/0000:00:01.0/power/control <<<auto
